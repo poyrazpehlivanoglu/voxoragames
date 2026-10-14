@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voxora Games | Roblox game studio</title>
+  <meta name="description" content="Voxora Games makes Roblox experiences. Learn how Roblox games work, how we build them, and what we are working on.">
+  <meta name="theme-color" content="#5B3DF5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,3 28,10 16,17 4,10' fill='%23FFB020'/%3E%3Cpolygon points='4,10 16,17 16,30 4,23' fill='%235B3DF5'/%3E%3Cpolygon points='28,10 16,17 16,30 28,23' fill='%233F27C7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Voxora Games, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <polygon points="16,3 28,10 16,17 4,10" fill="#FFB020"/>
+          <polygon points="4,10 16,17 16,30 4,23" fill="#5B3DF5"/>
+          <polygon points="28,10 16,17 16,30 28,23" fill="#3F27C7"/>
+        </svg>
+        <span>Voxora Games</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#roblox">About Roblox</a>
+        <a href="#process">How we build</a>
+        <a href="#games">Our games</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#studio">Studio</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>We build Roblox games people keep coming back to.</h1>
+          <p class="lead">Voxora Games is a studio that makes Roblox experiences. This site explains how Roblox games work, how we make ours, and what is in development.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#games">See our games</a>
+            <a class="btn btn-ghost" href="#roblox">How Roblox games work</a>
+          </div>
+        </div>
+        <div class="hero-stage">
+          <canvas id="voxel" aria-hidden="true"></canvas>
+          <div class="stage-controls">
+            <p class="stage-hint">Click a block to stack it. Move the pointer to raise the ground.</p>
+            <button class="btn-small" id="voxel-reset" type="button">Reset terrain</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roblox explained -->
+    <section class="band band-dark" id="roblox">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Roblox, explained</h2>
+          <p>Roblox is not one game. It is a platform where millions of people play games made by other people. Here is the short version of how it all fits together.</p>
+        </div>
+
+        <div class="tabs" id="tabs">
+          <div class="tab-list" role="tablist" aria-label="Roblox topics">
+            <button role="tab" id="tab-platform" aria-controls="panel-platform" aria-selected="true">The platform</button>
+            <button role="tab" id="tab-experiences" aria-controls="panel-experiences" aria-selected="false" tabindex="-1">Experiences</button>
+            <button role="tab" id="tab-robux" aria-controls="panel-robux" aria-selected="false" tabindex="-1">Robux and earning</button>
+            <button role="tab" id="tab-building" aria-controls="panel-building" aria-selected="false" tabindex="-1">Building games</button>
+            <button role="tab" id="tab-safety" aria-controls="panel-safety" aria-selected="false" tabindex="-1">Safety</button>
+          </div>
+
+          <div class="tab-panels">
+            <div role="tabpanel" id="panel-platform" aria-labelledby="tab-platform" class="panel">
+              <h3>A platform of player-made worlds</h3>
+              <p>Roblox lets people play, make, and share 3D games. Each player has a customizable avatar and one account that works across every game on the platform, so friends can jump between games together.</p>
+              <p>It runs on PC, Mac, phones, tablets, and consoles, and some games also support VR. A game built once reaches players on all of these, which is a big reason studios build on Roblox.</p>
+            </div>
+            <div role="tabpanel" id="panel-experiences" aria-labelledby="tab-experiences" class="panel" hidden>
+              <h3>Games are called experiences</h3>
+              <p>Roblox calls its games experiences. Players find them through the home page, search, friends, and recommendations, then join a server that holds a limited number of players at once.</p>
+              <p>Popular types include obbies (obstacle courses), tycoons, simulators, roleplay worlds, tower defense, survival, and fighting games. Many of the biggest experiences are updated every week, so the game keeps changing after launch.</p>
+            </div>
+            <div role="tabpanel" id="panel-robux" aria-labelledby="tab-robux" class="panel" hidden>
+              <h3>Robux powers the economy</h3>
+              <p>Robux is Roblox's virtual currency. Players buy it with real money or get it through Roblox Premium, then spend it in games and on avatar items.</p>
+              <p>Creators earn Robux from game passes (one-time perks), developer products (purchases that can be repeated, like coin packs), and from Premium subscribers spending time in their game. Eligible creators can cash out earned Robux through the Developer Exchange. Roblox keeps a share of sales, and rates and eligibility rules change, so always check the current rules on the Roblox Creator Hub.</p>
+            </div>
+            <div role="tabpanel" id="panel-building" aria-labelledby="tab-building" class="panel" hidden>
+              <h3>Roblox Studio and Luau</h3>
+              <p>Games are built in Roblox Studio, a free desktop tool for building worlds, designing interfaces, and testing. Gameplay is written in Luau, Roblox's scripting language, which is based on Lua.</p>
+              <p>Games use a client and server model. The server holds the truth about the game, and each player's device shows it. Player progress is saved with DataStores, and scripts talk across the two sides with remote events. Getting this split right keeps games fast and hard to cheat in.</p>
+            </div>
+            <div role="tabpanel" id="panel-safety" aria-labelledby="tab-safety" class="panel" hidden>
+              <h3>Many players are young</h3>
+              <p>A large share of Roblox players are children and teenagers. Roblox provides chat filtering, parental controls, and age-based settings, and every experience must follow its community standards.</p>
+              <p>As developers we add our own care on top: no pressure-based purchase prompts, clear prices, and moderation tools built in from the start.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="band" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How we make a Roblox game</h2>
+          <p>Every project follows the same five stages. We repeat the last two for as long as players are enjoying the game.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Prototype the core loop</h3>
+            <p>We build a rough, grey-box version in a few days. If the main action is not fun with no art, no amount of polish will fix it.</p>
+          </li>
+          <li>
+            <h3>Build in Roblox Studio</h3>
+            <p>Worlds, scripts, interface, sound, and saving. We keep scripts small and separate so one change does not break another system.</p>
+          </li>
+          <li>
+            <h3>Playtest with real players</h3>
+            <p>We watch new players try the game and note where they get stuck or quit. Their confusion shows us what to fix first.</p>
+          </li>
+          <li>
+            <h3>Launch</h3>
+            <p>We publish, set up the icon, thumbnails, and description, and check that servers, purchases, and saving all work on every device.</p>
+          </li>
+          <li>
+            <h3>Update and run live</h3>
+            <p>We read player feedback, fix bugs fast, and ship regular content updates and events that give players a reason to return.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="band band-tint" id="games">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Our games</h2>
+          <p>What we are building and what we have shipped. Each card links to the game on Roblox once it is live.</p>
+        </div>
+        <div class="games-grid" id="games-grid"></div>
+        <noscript><p>Turn on JavaScript to see the game list.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section class="band" id="glossary">
+      <div class="wrap glossary-wrap">
+        <div class="section-head">
+          <h2>Roblox glossary</h2>
+          <p>Plain definitions for terms you will hear when people talk about Roblox games.</p>
+          <label class="search" for="glossary-search">
+            <span class="search-label">Search terms</span>
+            <input id="glossary-search" type="search" placeholder="Try: Robux" autocomplete="off">
+          </label>
+          <p class="search-status" id="glossary-status" role="status" aria-live="polite"></p>
+        </div>
+        <dl class="glossary" id="glossary-list">
+          <div class="term"><dt>Experience</dt><dd>Roblox's word for a game. One experience can contain several places.</dd></div>
+          <div class="term"><dt>Place</dt><dd>A single world inside an experience. Large games sometimes use several places, such as a lobby and a match arena.</dd></div>
+          <div class="term"><dt>Roblox Studio</dt><dd>The free tool creators use to build, script, and test experiences.</dd></div>
+          <div class="term"><dt>Luau</dt><dd>The scripting language used in Roblox games. It is derived from Lua and adds features like optional types.</dd></div>
+          <div class="term"><dt>Robux</dt><dd>The virtual currency used across Roblox. Players buy it or get it with Premium, and creators earn it from sales.</dd></div>
+          <div class="term"><dt>Game pass</dt><dd>A one-time purchase that gives a player a permanent perk in one experience, like a faster speed or a VIP area.</dd></div>
+          <div class="term"><dt>Developer product</dt><dd>An item a player can buy again and again, such as an in-game coin pack.</dd></div>
+          <div class="term"><dt>Developer Exchange</dt><dd>A program that lets eligible creators exchange earned Robux for real money. Rules and rates are set by Roblox and can change.</dd></div>
+          <div class="term"><dt>DataStore</dt><dd>Roblox's service for saving player data, like progress and items, between play sessions.</dd></div>
+          <div class="term"><dt>Server</dt><dd>The machine running one live copy of an experience. Each server holds a limited number of players.</dd></div>
+          <div class="term"><dt>Client</dt><dd>The player's own device. It shows the game and sends the player's actions to the server.</dd></div>
+          <div class="term"><dt>Remote event</dt><dd>A message sent between the client and the server, for example when a player presses a button to buy something.</dd></div>
+          <div class="term"><dt>Obby</dt><dd>Short for obstacle course. A game where players jump and dodge their way to the finish.</dd></div>
+          <div class="term"><dt>Tycoon</dt><dd>A game where players build a business or base that earns money, then spend it to grow.</dd></div>
+          <div class="term"><dt>Simulator</dt><dd>A game built on a simple repeated action, like collecting or training, that gets stronger as you play.</dd></div>
+          <div class="term"><dt>Avatar</dt><dd>The character a player controls. Players customize it with clothes, accessories, and body shapes.</dd></div>
+          <div class="term"><dt>Creator Hub</dt><dd>Roblox's website for documentation, analytics, and managing experiences and assets.</dd></div>
+          <div class="term"><dt>Private server</dt><dd>A paid or free server only invited players can join, so friends can play without strangers.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Studio -->
+    <section class="band band-tint" id="studio">
+      <div class="wrap studio-grid">
+        <div class="section-head">
+          <h2>About Voxora Games</h2>
+          <p>Voxora Games is an independent studio making games for Roblox. We think a good Roblox game is easy to start, fair to pay for, and better every month than it was the month before.</p>
+        </div>
+        <dl class="principles">
+          <div>
+            <dt>Easy to start</dt>
+            <dd>A new player should understand what to do within the first thirty seconds.</dd>
+          </div>
+          <div>
+            <dt>Fair to pay for</dt>
+            <dd>Everything important can be played for free. Prices are clear, and nothing is hidden behind a surprise.</dd>
+          </div>
+          <div>
+            <dt>Always improving</dt>
+            <dd>We ship small updates often and fix problems players report quickly.</dd>
+          </div>
+          <div>
+            <dt>Built for young players</dt>
+            <dd>We design with a young audience in mind and follow Roblox's community standards.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="band" id="contact">
+      <div class="wrap contact-grid">
+        <div class="section-head">
+          <h2>Get in touch</h2>
+          <p>Want to play-test, collaborate, or ask about our games? Send us a message.</p>
+        </div>
+        <ul class="contact-list" id="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; <span id="year">2026</span> Voxora Games. All rights reserved.</p>
+      <p class="legal">Roblox is a trademark of Roblox Corporation. Voxora Games is an independent studio and is not affiliated with or endorsed by Roblox Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
